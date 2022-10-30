@@ -6,7 +6,7 @@ from .serializers import *
 
 # Create your views here.
 def index(request):
-    get_user = HNGUser().objects.all()
+    get_user = HNGUser.objects.all()
     query_dict = {}
     if get_user.count() > 0:
         # get the first part
