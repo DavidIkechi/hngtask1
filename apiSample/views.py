@@ -6,11 +6,11 @@ from .serializers import *
 
 # Create your views here.
 def index(request):
-    queryset = HNGUser().objects.all()
+    get_user = HNGUser().objects.all()
     query_dict = {}
-    if queryset.count() > 0:
+    if get_user.count() > 0:
         # get the first part
-        first = queryset[0]
+        first = get_user[0]
         query_dict['slackUsername'] = first.slackUsername
         query_dict['backend'] = first.backend
         query_dict['age'] = first.age
