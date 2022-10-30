@@ -4,4 +4,4 @@ from .models import *
 class HNGUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = HNGUser
-        fields = ['bio', 'age', 'backend', 'slackUsername']
+        fields = ['slackUsername', 'backend', 'age', 'bio']
