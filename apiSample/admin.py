@@ -3,4 +3,3 @@ from .models import *
 
 # Register your models here.
 admin.site.register(HNGUser)
-admin.site.register(Posts)

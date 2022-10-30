@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from rest_framework import viewsets, generics
 from .models import  *
-from .serializers import *
 
 # Create your views here.
 def index(request):
@@ -17,7 +15,3 @@ def index(request):
         query_dict['bio'] = first.bio
     
     return JsonResponse(query_dict)
-
-class HNGUserViewSet(generics.ListAPIView):
-    queryset = HNGUser.objects.all()
-    serializer_class = HNGUserSerializer

@@ -15,9 +15,7 @@ Including another URLconf
 """
 from django.urls import path, include
 from . import views
-from rest_framework.decorators import api_view
 
 urlpatterns = [
     path('',  views.index, name='index'),
-    path('getUsers/', views.HNGUserViewSet.as_view(), name='getUsers'),
 ]
